@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Propuesta QA Automation — Credicorp</title>
+    <title>Propuesta Automatización QA — Credicorp</title>
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -80,7 +80,7 @@
           <div class="risk-number red">R1</div>
           <div class="risk-title">Dependencia crítica de personas</div>
           <div class="risk-desc">
-            Con vacaciones próximas, el equipo opera con un solo QA. 180 casos
+            En caso de vacaciones próximas o la división de tiempo entre otros entregables, el equipo opera con un solo QA. cerca de 180 casos
             manuales requieren entre 6 y 9 días hábiles de esfuerzo individual.
             Ese tiempo no existe en las ventanas de release actuales.
           </div>
@@ -89,8 +89,8 @@
           <div class="risk-number amber">R2</div>
           <div class="risk-title">Tiempo de regresión sin techo</div>
           <div class="risk-desc">
-            Cada release agrega entre 5 y 10 casos sin eliminar los anteriores.
-            Con 7 releases al año, el volumen crece a 230–250 casos en 12 meses.
+            Cada release puede agrega entre 5 y 10 casos sin eliminar los anteriores.
+            Si lo llevamos a un volumen grande con 7 releases al año, el volumen crece a 230–250 casos en 12 meses.
             La capacidad del equipo no crece en paralelo.
           </div>
         </div>
@@ -101,7 +101,8 @@
             Java 8 modifica comportamientos de fecha, streams e interfaces.
             Estos cambios no siempre producen errores visibles; se manifiestan
             bajo condiciones específicas que la regresión manual no está
-            diseñada para detectar.
+            diseñada para detectar y pueden aparecer en producción, lo cual
+            sería más crítico.
           </div>
         </div>
       </div>
@@ -158,9 +159,9 @@
       <p class="section-label">02 · Impacto económico</p>
       <h2 class="section-title">El costo oculto de <em>la repetición</em></h2>
       <p class="section-intro">
-        Una regresión manual de 180 casos tiene cuatro capas de esfuerzo. La
-        mayoría de los equipos solo cuenta la primera.
-      </p>
+        Una regresión manual de 180 casos tiene cuatro capas de esfuerzo. 
+        Actualmente solo identificamos la primera.
+        </p>
 
       <table class="cost-table">
         <thead>
@@ -548,31 +549,19 @@
       >
         <p
           style="
-            font-family: var(--mono);
-            font-size: 11px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--muted);
-            margin-bottom: 1.25rem;
-          "
-        >
-          Argumento para la conversación con líderes
-        </p>
-        <p
-          style="
             font-size: 15px;
             color: var(--text);
             line-height: 1.7;
             max-width: 700px;
           "
         >
-          Tenemos un release crítico de migración tecnológica y una reducción
+          Tenemos un release crítico de migración tecnológica y en caso de una reducción
           temporal del equipo QA a una sola persona. Con el modelo actual, eso
           significa regresión incompleta o retraso del release. La
           automatización que hemos iniciado con el flujo de login es la
           respuesta técnica a ese riesgo específico. Los resultados del piloto
           son positivos. La propuesta es continuar de forma estructurada, medir
-          el impacto, y presentar los resultados al cliente como evidencia de
+          el impacto, y presentar los resultados como evidencia de
           madurez del servicio QA.
         </p>
       </div>
@@ -581,7 +570,7 @@
     <div class="divider"></div>
 
     <footer>
-      <div class="footer-brand">QA Strategy · Credicorp · 2025</div>
+      <div class="footer-brand">QA Strategy · Juan Rosas · 2025</div>
       <div class="footer-note">
         Propuesta de evolución hacia modelo híbrido Manual + Automation ·
         Playwright
