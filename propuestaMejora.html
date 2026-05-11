@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propuesta QA Automation — Credicorp</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+
+    <!-- NAV -->
+    <nav>
+      <div class="nav-logo">
+        <span class="live-dot"></span>QA Strategy · Credicorp
+      </div>
+      <ul class="nav-links">
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#costo">Costo</a></li>
+        <li><a href="#tecnica">Técnica</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#impacto">Impacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <p class="hero-eyebrow">Propuesta estratégica · Migración Java 7 → 8</p>
+      <h1 class="hero-title">
+        Evolución del modelo QA hacia <em>automatización inteligente</em>
+      </h1>
+      <p class="hero-sub">
+        El aseguramiento de calidad actual no puede sostener el ritmo de una
+        migración tecnológica crítica. Esta propuesta define cómo cambiarlo sin
+        modificar contratos, metodología ni estructura del equipo.
+      </p>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <span class="meta-label">Cliente</span>
+          <span class="meta-value">Credicorp</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Contexto</span>
+          <span class="meta-value">Portal corporativo · Cascada</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Equipo QA</span>
+          <span class="meta-value">2 personas</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Casos activos</span>
+          <span class="meta-value">180 manuales</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Herramienta</span>
+          <span class="meta-value">Playwright</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SECCIÓN 1: PROBLEMA -->
+    <section id="problema">
+      <p class="section-label">01 · Situación actual</p>
+      <h2 class="section-title">
+        Tres vectores de riesgo <em>no documentados</em>
+      </h2>
+      <p class="section-intro">
+        El modelo QA actual expone al proyecto a riesgos operativos concretos
+        que crecen con cada release. Ninguno está siendo gestionado formalmente.
+      </p>
+
+      <div class="risk-grid">
+        <div class="risk-card">
+          <div class="risk-number red">R1</div>
+          <div class="risk-title">Dependencia crítica de personas</div>
+          <div class="risk-desc">
+            Con vacaciones próximas, el equipo opera con un solo QA. 180 casos
+            manuales requieren entre 6 y 9 días hábiles de esfuerzo individual.
+            Ese tiempo no existe en las ventanas de release actuales.
+          </div>
+        </div>
+        <div class="risk-card">
+          <div class="risk-number amber">R2</div>
+          <div class="risk-title">Tiempo de regresión sin techo</div>
+          <div class="risk-desc">
+            Cada release agrega entre 5 y 10 casos sin eliminar los anteriores.
+            Con 7 releases al año, el volumen crece a 230–250 casos en 12 meses.
+            La capacidad del equipo no crece en paralelo.
+          </div>
+        </div>
+        <div class="risk-card">
+          <div class="risk-number blue">R3</div>
+          <div class="risk-title">Regresión silenciosa en migración</div>
+          <div class="risk-desc">
+            Java 8 modifica comportamientos de fecha, streams e interfaces.
+            Estos cambios no siempre producen errores visibles; se manifiestan
+            bajo condiciones específicas que la regresión manual no está
+            diseñada para detectar.
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison">
+        <div class="comp-card">
+          <div class="comp-header">
+            <span class="comp-badge bad">Hoy</span>
+            <span class="comp-title">Modelo solo manual</span>
+          </div>
+          <ul class="comp-list">
+            <li>Regresión completa: 6–9 días con 1 QA disponible</li>
+            <li>Evidencia: capturas manuales, nombres genéricos</li>
+            <li>
+              Defectos de migración: difíciles de aislar sin instrumentación
+            </li>
+            <li>
+              Release con equipo reducido: cobertura parcial no documentada
+            </li>
+            <li>Costo anual: 280–320 h/persona en trabajo repetitivo</li>
+          </ul>
+        </div>
+        <div class="comp-card highlight">
+          <div class="comp-header">
+            <span class="comp-badge good">Propuesto</span>
+            <span class="comp-title">Modelo híbrido Manual + Automation</span>
+          </div>
+          <ul class="comp-list" style="list-style: none">
+            <li style="color: var(--muted)">
+              Regresión crítica: 2–3 horas de ejecución automática
+            </li>
+            <li style="color: var(--muted)">
+              Evidencia: reporte HTML auditabie generado automáticamente
+            </li>
+            <li style="color: var(--muted)">
+              Defectos de migración: detectados por comparación de
+              comportamiento
+            </li>
+            <li style="color: var(--muted)">
+              Release con equipo reducido: cobertura completa garantizada
+            </li>
+            <li style="color: var(--muted)">
+              Costo anual: 80–100 h/persona en trabajo de valor real
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SECCIÓN 2: COSTO -->
+    <section id="costo">
+      <p class="section-label">02 · Impacto económico</p>
+      <h2 class="section-title">El costo oculto de <em>la repetición</em></h2>
+      <p class="section-intro">
+        Una regresión manual de 180 casos tiene cuatro capas de esfuerzo. La
+        mayoría de los equipos solo cuenta la primera.
+      </p>
+
+      <table class="cost-table">
+        <thead>
+          <tr>
+            <th>Capa de esfuerzo</th>
+            <th>Cálculo</th>
+            <th>Horas / regresión</th>
+            <th style="text-align: right">Automatable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="layer-bar">
+                <div class="layer-dot" style="background: #378add"></div>
+                Ejecución de casos
+              </div>
+              <div
+                style="font-size: 12px; color: var(--muted); margin-top: 2px"
+              >
+                180 casos × 12 min promedio
+              </div>
+            </td>
+            <td style="color: var(--muted); font-size: 13px">180 × 12 min</td>
+            <td>36 h</td>
+            <td>90%</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="layer-bar">
+                <div class="layer-dot" style="background: #7f77dd"></div>
+                Evidencia manual
+              </div>
+              <div
+                style="font-size: 12px; color: var(--muted); margin-top: 2px"
+              >
+                Captura, nombre, pegado, anotación
+              </div>
+            </td>
+            <td style="color: var(--muted); font-size: 13px">180 × 6 min</td>
+            <td>18 h</td>
+            <td>95%</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="layer-bar">
+                <div class="layer-dot" style="background: #d85a30"></div>
+                Reporte de defectos en Jira
+              </div>
+              <div
+                style="font-size: 12px; color: var(--muted); margin-top: 2px"
+              >
+                ~8 defectos × 25 min de redacción y adjunto
+              </div>
+            </td>
+            <td style="color: var(--muted); font-size: 13px">8 × 25 min</td>
+            <td>3.3 h</td>
+            <td>30%</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="layer-bar">
+                <div class="layer-dot" style="background: #888780"></div>
+                Coordinación y retest
+              </div>
+              <div
+                style="font-size: 12px; color: var(--muted); margin-top: 2px"
+              >
+                Consultas con dev, verificación de fixes, rerun parcial
+              </div>
+            </td>
+            <td style="color: var(--muted); font-size: 13px">~15% del total</td>
+            <td>8.3 h</td>
+            <td>15%</td>
+          </tr>
+          <tr>
+            <td><strong>Total por regresión</strong></td>
+            <td></td>
+            <td><strong>~65.6 h</strong></td>
+            <td style="color: var(--accent); font-family: var(--mono)">
+              ~60% recuperable
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="impact-row">
+        <div class="impact-cell">
+          <div class="impact-num green">~66</div>
+          <div class="impact-label">horas por regresión completa</div>
+        </div>
+        <div class="impact-cell">
+          <div class="impact-num amber">459</div>
+          <div class="impact-label">horas anuales con 7 releases</div>
+        </div>
+        <div class="impact-cell">
+          <div class="impact-num blue">2.9</div>
+          <div class="impact-label">meses-persona en trabajo repetitivo</div>
+        </div>
+        <div class="impact-cell">
+          <div class="impact-num red">~275</div>
+          <div class="impact-label">
+            horas recuperables con 60% de automatización
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-block">
+        <p>
+          "El equipo destina casi 3 meses-persona al año a repetir las mismas
+          validaciones. Esas horas no generan conocimiento nuevo ni mejora
+          acumulada. Son el costo de mantener el estándar mínimo con un modelo
+          que no escala."
+        </p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SECCIÓN 3: TÉCNICA -->
+    <section id="tecnica">
+      <p class="section-label">03 · Solución técnica</p>
+      <h2 class="section-title">
+        Por qué <em>Playwright</em> y cómo funciona aquí
+      </h2>
+      <p class="section-intro">
+        La elección no es por tendencia. Playwright resuelve exactamente los
+        problemas estructurales del proyecto: ambientes inestables, evidencias
+        manuales, y ejecución sin infraestructura dedicada.
+      </p>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-card-icon">[ ]</div>
+          <h3>Ejecución local sin servidor</h3>
+          <p>
+            Corre directamente en la máquina del QA con un solo comando. No
+            requiere Docker, Jenkins, ni permisos de red especiales. Compatible
+            con las restricciones actuales de soporte TI.
+          </p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card-icon">◈</div>
+          <h3>Evidencia automática por paso</h3>
+          <p>
+            Genera capturas de pantalla, video de ejecución y reporte HTML
+            autocontenido en cada run. Elimina el 95% del trabajo manual de
+            documentación de evidencias.
+          </p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card-icon">⟳</div>
+          <h3>Reintentos y esperas inteligentes</h3>
+          <p>
+            Maneja ambientes inestables con reintentos automáticos y esperas
+            basadas en el estado del DOM, no en tiempos fijos. Los fallos de
+            ambiente quedan documentados, no confundidos con defectos.
+          </p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card-icon">≡</div>
+          <h3>Gherkin/BDD para comunicación</h3>
+          <p>
+            Los casos automatizados se escriben en lenguaje de negocio
+            (Dado/Cuando/Entonces). El cliente y el equipo de desarrollo leen
+            los criterios de aceptación sin conocimiento técnico.
+          </p>
+        </div>
+      </div>
+
+      <div class="arch-box">
+        <p
+          style="
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+          "
+        >
+          Arquitectura mínima viable · Sin DevOps · Sin infraestructura dedicada
+        </p>
+        <div class="arch-flow">
+          <div class="arch-node">
+            <div class="arch-node-icon">{ }</div>
+            <div class="arch-node-title">Suite Playwright</div>
+            <div class="arch-node-sub">
+              Scripts TypeScript<br />Page Object Model<br />Config por ambiente
+            </div>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <div class="arch-node-icon">▶</div>
+            <div class="arch-node-title">Ejecución local</div>
+            <div class="arch-node-sub">
+              npx playwright test<br />Máquina del QA<br />Headed o headless
+            </div>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <div class="arch-node-icon">◧</div>
+            <div class="arch-node-title">Reporte HTML</div>
+            <div class="arch-node-sub">
+              Screenshots por paso<br />Video de ejecución<br />Traza de red
+            </div>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <div class="arch-node-icon">⊡</div>
+            <div class="arch-node-title">Jira (ticket)</div>
+            <div class="arch-node-sub">
+              Reporte adjunto<br />Comentario de resumen<br />Defectos
+              vinculados
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 14px; color: var(--muted); margin-bottom: 0.75rem">
+        Ejemplo de caso automatizado con Gherkin — legible para negocio y
+        ejecutable por Playwright:
+      </p>
+      <div class="code-block">
+        <span class="cm"># language: es</span>
+        <span class="kw">Característica:</span> Acceso al portal corporativo
+
+        <span class="kw">Escenario:</span> Login exitoso con rol administrador
+        <span class="kw">Dado</span> que el usuario tiene credenciales de
+        administrador <span class="kw">Cuando</span> ingresa sus datos en el
+        formulario de acceso <span class="kw">Entonces</span> debe ver el panel
+        de KPIs completo <span class="kw">Y</span> el módulo de reportes debe
+        estar habilitado
+
+        <span class="kw">Escenario:</span> Validación de permisos por rol
+        <span class="kw">Dado</span> que el usuario tiene rol de consulta
+        <span class="kw">Cuando</span> intenta acceder al módulo de
+        configuración <span class="kw">Entonces</span> debe ver un mensaje de
+        acceso restringido
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SECCIÓN 4: ROADMAP -->
+    <section id="roadmap">
+      <p class="section-label">04 · Plan de implementación</p>
+      <h2 class="section-title">Cuatro fases hacia la <em>madurez QA</em></h2>
+      <p class="section-intro">
+        La evolución es progresiva, medible y reversible en cada etapa. El
+        piloto ya está en curso con el flujo de login automatizado.
+      </p>
+
+      <div class="roadmap">
+        <div class="roadmap-item">
+          <div class="roadmap-dot active"></div>
+          <div class="roadmap-phase">Fase 1 · Semanas 1–4 · En curso</div>
+          <div class="roadmap-title">Piloto controlado</div>
+          <div class="roadmap-desc">
+            Login automatizado (completado). Extensión a 3–5 flujos críticos
+            adicionales: navegación entre módulos, validación de formularios
+            principales, verificación de permisos por rol. Medición de tiempo de
+            ejecución vs. manual para construir el argumento de ROI con datos
+            reales del proyecto.
+          </div>
+          <div class="roadmap-tags">
+            <span class="tag">Login ✓</span>
+            <span class="tag">Flujos críticos</span>
+            <span class="tag">Medición ROI</span>
+            <span class="tag">Sin costo adicional</span>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-dot soon"></div>
+          <div class="roadmap-phase blue">Fase 2 · Meses 2–4</div>
+          <div class="roadmap-title">Adopción progresiva</div>
+          <div class="roadmap-desc">
+            Expansión a 40–60% de los casos automatizables. Integración del
+            reporte HTML como evidencia estándar en tickets Jira de release.
+            Documentación de la suite en el repositorio del proyecto. Primera
+            presentación de resultados al cliente con métricas de cobertura y
+            tiempo ahorrado.
+          </div>
+          <div class="roadmap-tags">
+            <span class="tag">40–60% cobertura auto</span>
+            <span class="tag">Evidencia en Jira</span>
+            <span class="tag">Suite versionada</span>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-dot future"></div>
+          <div class="roadmap-phase amber">Fase 3 · Meses 4–7</div>
+          <div class="roadmap-title">Consolidación del modelo híbrido</div>
+          <div class="roadmap-desc">
+            Más del 70% de los casos repetitivos automatizados. El equipo QA
+            dedica el tiempo liberado a pruebas exploratorias y análisis de
+            comportamiento diferencial Java 7 vs 8. La regresión automática se
+            ejecuta al inicio de cada ciclo; el QA humano valida los casos de
+            criterio subjetivo y los nuevos flujos.
+          </div>
+          <div class="roadmap-tags">
+            <span class="tag">+70% cobertura</span>
+            <span class="tag">Modelo híbrido estable</span>
+            <span class="tag">QA enfocado en valor</span>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-dot future"></div>
+          <div class="roadmap-phase gray">Fase 4 · Mes 7+</div>
+          <div class="roadmap-title">Base para CI/CD (opcional)</div>
+          <div class="roadmap-desc">
+            La suite está suficientemente madura para conectarse a un pipeline
+            de integración continua si el cliente decide invertir en
+            infraestructura DevOps. Esta fase no es requisito del modelo
+            híbrido; es la consecuencia natural si la organización decide
+            madurar hacia automatización continua.
+          </div>
+          <div class="roadmap-tags">
+            <span class="tag">Suite lista para CI</span>
+            <span class="tag">Propuesta infraestructura</span>
+            <span class="tag">Decisión del cliente</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SECCIÓN 5: IMPACTO -->
+    <section id="impacto">
+      <p class="section-label">05 · Resultado esperado</p>
+      <h2 class="section-title">Lo que cambia <em>sin cambiar nada</em></h2>
+      <p class="section-intro">
+        La propuesta no modifica contratos, metodología ni estructura. Lo que
+        cambia es la capacidad operativa del equipo y la calidad del
+        aseguramiento entregado al cliente.
+      </p>
+
+      <div class="impact-row">
+        <div class="impact-cell">
+          <div class="impact-num green">−75%</div>
+          <div class="impact-label">
+            tiempo de ejecución en flujos críticos automatizados
+          </div>
+        </div>
+        <div class="impact-cell">
+          <div class="impact-num blue">100%</div>
+          <div class="impact-label">
+            cobertura garantizada incluso con 1 QA disponible
+          </div>
+        </div>
+        <div class="impact-cell">
+          <div class="impact-num amber">0</div>
+          <div class="impact-label">
+            costo adicional en licencias o infraestructura
+          </div>
+        </div>
+        <div class="impact-cell">
+          <div class="impact-num red">+275 h</div>
+          <div class="impact-label">
+            horas/año recuperadas para trabajo de valor real
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-block">
+        <p>
+          "El proyecto atraviesa una migración tecnológica crítica con un equipo
+          reducido temporalmente. La automatización no es una mejora futura; es
+          la respuesta técnica al riesgo operativo presente."
+        </p>
+      </div>
+
+      <div
+        style="
+          background: var(--bg2);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 2rem;
+          margin-top: 2rem;
+        "
+      >
+        <p
+          style="
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.25rem;
+          "
+        >
+          Argumento para la conversación con líderes
+        </p>
+        <p
+          style="
+            font-size: 15px;
+            color: var(--text);
+            line-height: 1.7;
+            max-width: 700px;
+          "
+        >
+          Tenemos un release crítico de migración tecnológica y una reducción
+          temporal del equipo QA a una sola persona. Con el modelo actual, eso
+          significa regresión incompleta o retraso del release. La
+          automatización que hemos iniciado con el flujo de login es la
+          respuesta técnica a ese riesgo específico. Los resultados del piloto
+          son positivos. La propuesta es continuar de forma estructurada, medir
+          el impacto, y presentar los resultados al cliente como evidencia de
+          madurez del servicio QA.
+        </p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <footer>
+      <div class="footer-brand">QA Strategy · Credicorp · 2025</div>
+      <div class="footer-note">
+        Propuesta de evolución hacia modelo híbrido Manual + Automation ·
+        Playwright
+      </div>
+    </footer>
+  </body>
+</html>
